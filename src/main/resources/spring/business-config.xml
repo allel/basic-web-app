@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 		
-	<context:component-scan base-package="tutorial.core.repositories.jpa"></context:component-scan>
+	<context:component-scan base-package="bioresultats.core.repositories.jpa"></context:component-scan>
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="username" value="sa"/>
@@ -28,7 +28,7 @@
 				<entry key="hibernate.hbm2ddl.auto" value="create-drop"/>
 			</map>
 		</property>
-		<property name="packagesToScan" value="tutorial.core.models.entities"/>
+		<property name="packagesToScan" value="bioresultats.core.models.entities"/>
 	</bean>
 	
 	<tx:annotation-driven/>
@@ -38,6 +38,6 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<context:component-scan base-package="tutorial.core.services.impl"/>
+	<context:component-scan base-package="bioresultats.core.services.impl"/>
 
 </beans>
